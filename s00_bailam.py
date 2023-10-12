@@ -31,8 +31,17 @@ hi('A', 'B', 'C')            | Hi A, B, and C!
 hi('1', '22', '333', '4444') | Hi 1, 22, 333 and 4444!
 """
 #endregion debai
-
+def hi(*name) :
+    if len(name) == 1 :
+        if name[0] is None or name[0] == "" or name[0] == " " :
+            return "Hi!"
+        else : return f"Hi {str(name[0])}!"
+    if len(name) == 2 : 
+        return f"Hi {str(name[0])}, and {str(name[1])}!"
+    if len(name) == 3 : 
+        return f"Hi {str(name[0])}, {str(name[1])}, and {str(name[2])}!"
+    if len(name) == 4 : 
+        return f"Hi {str(name[0])}, {str(name[1])}, {str(name[2])}, and {str(name[3])}!"
 #region bailam
-def hi(name):
-  return 'todo'
+
 #endregion bailam
